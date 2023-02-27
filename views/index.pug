@@ -74,8 +74,8 @@ html(lang="en")
                     each item in FitPlans
                         figure.frame
                             a(href=`${item.link}`)
-                                img(src=`${item.photo}` alt=`${item.alt}`)
-                            figcaption.pic-text #{item.type}
+                                img(src=`${item.image}` alt=`${item.alt_text}`)
+                            figcaption.pic-text #{item.caption}
 
             //Use the footer area to add webpage footer content
             footer
