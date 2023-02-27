@@ -1,0 +1,84 @@
+doctype html
+
+html(lang="en")
+    head
+        title #{title}
+        meta(charset="utf-8")
+        link(rel="stylesheet" href="css/styles.css")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Francois+One&family=Roboto+Slab&display=swap" rel="stylesheet")
+        link(rel="shortcut icon" href="images/favicon.ico")
+        link(rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png")
+        link(rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png")
+        link(rel="icon" sizes="192x192" href="images/android-chrome-192.png")
+
+    body
+
+        div#container
+
+            //Use the header area for the website name or logo
+            header
+                a(href="index.html")
+                    img(src="images/forward-fitness-logo.png" alt="Forward Fitness Club logo")
+
+            //Use the nav area to add hyperlinks to other pages within the website -->
+            nav
+                ul
+                    li
+                        a(href="index.html") Home
+                    li
+                        a(href="about.html") About Us
+                    li
+                        a(href="classes.html") Classes
+                    li
+                        a(href="nutrition.html") Nutrition
+                    li
+                        a(href="contact.html") Contact Us
+
+            //Hero Image -->
+            div#hero.tablet-desktop
+                img(src="images/hero-image.jpg" alt="left arm extended holding a weight")
+
+            //Use the main area to add the main content of the webpage -->
+            main
+
+                div.mobile
+
+                    p Welcome to Forward Fitness Club. Our mission is to  help our clients meet their fitness and nutrition goals.
+
+                    h3 FREE One-Week Trial Membership!
+                    p Call Us Today to Get Started
+                    p.tel-link
+                        a(href="tel:8145559608") (814) 555-9608
+
+                    h4 Fitness Club Hours:
+                    ul.hours
+                        li Mon - Thu: 6:00am - 6:00pm
+                        li Friday: 6:00am - 4:00pm
+                        li Saturday: 8:00am - 6:00pm
+                        li Sunday: Closed
+
+                div.tablet-desktop
+
+                p Welcome to Forward Fitness Club. Our mission is to  help our clients meet their fitness and nutrition goals.
+
+                p If you have struggled with getting healthy and need the motivation and resources to make a healthy lifestyle change, contact us today. Our facility includes state-of-the-art equipment, convenient group training classes, and nutrition tips and information to keep you healthy.
+
+                p We provide a FREE, one-week membership to experience the benefits of our equipment and facility. This one-week trial gives you complete access to our equipment, training classes, and nutrition planning. Contact us today to
+                    span.action start your free trial!
+
+                div.grid
+
+                    each item in FitPlans
+                        figure.frame
+                            a(href=`${item.link}`)
+                                img(src=`${item.photo}` alt=`${item.alt}`)
+                            figcaption.pic-text #{item.type}
+
+            //Use the footer area to add webpage footer content
+            footer
+                p &copy; Copyright 2021. All Rights Reserved.
+                p
+                    a(href="mailto:forwardfitness@club.net") forwardfitness@club.net
