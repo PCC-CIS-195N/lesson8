@@ -1,0 +1,80 @@
+doctype html
+// This website template was created by: Student's First Name Student's Last Name
+html(lang='en')
+    head
+        title #{title}
+        | &#x9;
+        meta(charset='utf-8')
+        link(rel='stylesheet', href='css/styles.css')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        link(href='https://fonts.googleapis.com/css?family=Francois+One|Roboto+Slab&display=swap', rel='stylesheet')
+        | &#x9;
+        link(rel='shortcut icon', href='images/favicon.ico')
+        | &#x9;
+        link(rel='icon', type='image/png', sizes='32x32', href='images/favicon-32.png')
+        link(rel='apple-touch-icon', sizes='180x180', href='images/apple-touch-icon.png')
+        | &#x9;
+        link(rel='icon', sizes='192x192', href='images/android-chrome-192.png')
+    body
+        #container
+            // Use the header area for the website name or logo
+            header
+                a(href='index.html')
+                    img(src='images/forward-fitness-logo.png', alt='Forward Fitness Club logo', width='297', height='220')
+            // Use the nav area to add hyperlinks to other pages within the website
+            nav
+                ul
+                    li
+                        a(href='index.html') Home
+                    |
+                    li
+                        a(href='about.html') About Us
+                    |
+                    li
+                        a(href='classes.html') Classes
+                    |
+                    li
+                        a(href='nutrition.html') Nutrition
+                    |
+                    li
+                        a(href='contact.html') Contact Us
+            // Use the main area to add the main content of the webpage
+            main
+                #contact
+                    h2 Ready to get started? Contact us today.
+                    | &#x9;&#x9;&#x9;&#x9;
+                    form#inquiryForm(method='POST', action='/submit')
+                        //
+                          Spam Mitigation Honeypot field
+                          <input type="text" name="honeypot" id="honeypot" value="" alt="if you fill this field out then your email will not be sent"/>
+                        label(for='name') Name:
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;
+                        input#name(type='text', name='name')
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;
+                        label(for='email') E-mail:
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;
+                        input#email(type='text', name='email')
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;
+                        label(for='question') Question:
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;
+                        textarea#question(form='inquiryForm', rows='10', cols='50', name='question')
+                        | &#x9;&#x9;&#x9;&#x9;&#x9;
+                        input#submit(type='submit', value='Submit')
+                    h4.mobile.tel-link
+                        a(href='tel:8145559608') (814) 555-9608
+                    h4.tablet-desktop.tel-num (814) 555-9608
+                    | &#x9;&#x9;&#x9;&#x9;
+                    h4
+                        | Email us:
+                        a.contact-email-link(href='mailto:forwardfitness@club.net') forwardfitness@club.net
+                    | &#x9;&#x9;&#x9;&#x9;
+                    h4 Visit us at: 1275 Channel Center Street, Boston, MA 02210
+                    | &#x9;&#x9;&#x9;&#x9;
+                    | &#x9;&#x9;&#x9;&#x9;
+                    iframe.map(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.8517572084897!2d-71.05362748503984!3d42.34568384400281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e37a7dc2b67e7b%3A0x36ec93427cd9c5f1!2sChannel+Center+St%2C+Boston%2C+MA+02210!5e0!3m2!1sen!2sus!4v1558137213400!5m2!1sen!2sus', allowfullscreen='', width='600', height='450')
+            // Use the footer area to add webpage footer content
+            footer
+                p &copy; Copyright 2021. All Rights Reserved.
+                | &#x9;&#x9;&#x9;
+                p
+                    a(href='mailto:forwardfitness@club.net') forwardfitness@club.net
